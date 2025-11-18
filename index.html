@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop · A1 Fidgets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{background:#ffffff;color:#111827}
+        .card{border:1px solid #e5e7eb;background:#f3f4f6;border-radius:12px;padding:16px}
+        .new-badge{display:inline-block;background:#dc2626;color:#fff;padding:4px 8px;border-radius:9999px;text-transform:uppercase;font-weight:700;font-size:0.7rem}
+        .active-nav { font-weight:700; color:#1e40af; }
+    </style>
+    <link rel="icon" type="image/png" href="../images/icon.jpg" />
+</head>
+<body class="font-sans">
+<header class="w-full py-4 px-6 border-b border-gray-300 flex justify-between items-center bg-white sticky top-0 z-50">
+    <div class="flex items-center gap-3">
+        <img src="../images/icon.jpg" alt="A1 Fidgets" class="w-10 h-10 rounded-full">
+        <h1 class="text-2xl font-bold"><a href="../index.html">A1 Fidgets</a></h1>
+    </div>
+    <nav class="flex gap-4 items-center">
+        <a href="../index.html" class="text-blue-600 hover:underline font-semibold">Shop</a>
+        <a href="../about.html" class="text-blue-600 hover:underline">About</a>
+        <a href="../index.html#videos" class="text-blue-600 hover:underline">Videos</a>
+        <a href="../index.html#contact" class="text-blue-600 hover:underline">Contact</a>
+        <a href="../policy.html" class="text-blue-600 hover:underline">Policy</a>
+        <a href="https://www.etsy.com/people/7ew9ux50u1vo96cl" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Visit Etsy</a>
+    </nav>
+</header>
+
+<main class="py-12 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Shop</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card">
+            <img src="../images/IMG_1765-removebg-preview.png" alt="3-Key Fidget Switch" class="rounded mb-4 w-full" />
+            <h3 class="text-xl font-semibold">3-Key Fidget Switch</h3>
+            <p class="text-gray-600 text-sm mb-3">Triple-key tactile fidget block. (Tan)</p>
+            <a href="https://www.etsy.com/people/7ew9ux50u1vo96cl" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View on Etsy</a>
+        </div>
+
+        <div class="card">
+            <img src="../images/IMG_1764-removebg-preview.png" alt="Single Red Fidget Key" class="rounded mb-4 w-full" />
+            <h3 class="text-xl font-semibold">Single Red Fidget Key</h3>
+            <p class="text-gray-600 text-sm mb-3">Compact single-key fidget. (Red)</p>
+            <a href="https://www.etsy.com/people/7ew9ux50u1vo96cl" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View on Etsy</a>
+        </div>
+
+        <div class="card">
+            <img src="../images/IMG_1763-removebg-preview.png" alt="Single Yellow Fidget Key" class="rounded mb-4 w-full" />
+            <h3 class="text-xl font-semibold">Single Yellow Fidget Key</h3>
+            <p class="text-gray-600 text-sm mb-3">Simple single-key tactile cube. (Tan)</p>
+            <a href="https://www.etsy.com/people/7ew9ux50u1vo96cl" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View on Etsy</a>
+        </div>
+
+        <div class="card">
+            <img src="../images/IMG_coming_soon.png" alt="Coming Soon" class="rounded mb-4 w-full" />
+            <h3 class="text-xl font-semibold">New Coming Fidget Set <span class="new-badge">NEW</span></h3>
+            <p class="text-gray-600 text-sm mb-3">Limited release coming soon.</p>
+            <a href="../new.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Learn More</a>
+        </div>
+    </div>
+</main>
+
+<footer class="text-center py-8 text-gray-500 border-t border-gray-300">© 2025 A1 Fidgets</footer>
+
+<script>
+    (function(){
+        const links = document.querySelectorAll('nav a[href]');
+        const loc = window.location.pathname.split('/').pop() || 'shop.html';
+        links.forEach(a=>{
+            const href = (a.getAttribute('href')||'').split('#')[0];
+            const file = href.split('/').pop();
+            if(file === loc || (href === '' && loc === 'shop.html')) a.classList.add('active-nav');
+        });
+    })();
+</script>
+
+</body>
+</html>
