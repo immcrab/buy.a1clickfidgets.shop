@@ -18,22 +18,50 @@
             box-shadow: 0 8px 24px rgba(220,38,38,0.22);
         }
         .active-nav { font-weight: 700; color: #1e40af; }
+        .tag-badge {
+            display: inline-block;
+            background: #dc2626;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.875rem;
+            padding: 0.4rem 0.8rem 0.4rem 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            clip-path: polygon(0 0, calc(100% - 0.5rem) 0, 100% 50%, calc(100% - 0.5rem) 100%, 0 100%);
+            transform: rotate(-18deg) skewX(-5deg);
+            transition: all 0.3s ease;
+        }
+        .tag-badge:hover {
+            background: #b91c1c;
+            transform: rotate(-18deg) skewX(-5deg) scale(1.05);
+        }
+        @keyframes pulse-scale {
+            0%, 100% { transform: rotate(-18deg) skewX(-5deg) scale(1); }
+            50% { transform: rotate(-18deg) skewX(-5deg) scale(1.15); }
+        }
+        .tag-badge {
+            animation: pulse-scale 1.5s ease-in-out infinite;
+        }
     </style>
     <link rel="icon" type="image/png" href="../images/icon.jpg" />
 </head>
 <body class="font-sans">
-<header class="w-full py-4 px-6 border-b border-gray-300 flex justify-between items-center bg-white sticky top-0 z-50">
+<header class="w-full py-4 px-6 border-b border-gray-300 flex justify-between items-center bg-white sticky top-0 z-50" id="header">
     <div class="flex items-center gap-3">
         <img src="../images/icon.jpg" alt="A1 Fidgets" class="w-10 h-10 rounded-full">
         <h1 class="text-2xl font-bold"><a href="../index.html">A1 Fidgets</a></h1>
     </div>
-    <nav class="flex gap-4 items-center">
-        <a href="https://buy.a1clickfidgets.shop" class="text-blue-600 hover:underline font-semibold">Shop</a>
-        <a href="../about.html" class="text-blue-600 hover:underline">About</a>
-        <a href="../index.html#videos" class="text-blue-600 hover:underline">Videos</a>
-        <a href="../index.html#contact" class="text-blue-600 hover:underline">Contact</a>
-        <a href="../policy.html" class="text-blue-600 hover:underline">Policy</a>
-        <a href="https://www.etsy.com/people/7ew9ux50u1vo96cl" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Visit Etsy</a>
+    <nav class="flex gap-4 items-center flex-col">
+        <div class="flex gap-4 items-center">
+            <a href="https://buy.a1clickfidgets.shop" class="text-blue-600 hover:underline font-semibold">Shop</a>
+            <a href="../about.html" class="text-blue-600 hover:underline">About</a>
+            <a href="../index.html#videos" class="text-blue-600 hover:underline">Videos</a>
+            <a href="../index.html#contact" class="text-blue-600 hover:underline">Contact</a>
+            <a href="../policy.html" class="text-blue-600 hover:underline">Policy</a>
+            <a href="https://www.etsy.com/people/7ew9ux50u1vo96cl" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Visit Etsy</a>
+        </div>
+        <a href="../clearance.html" class="tag-badge">CLEARANCE</a>
     </nav>
 </header>
 
